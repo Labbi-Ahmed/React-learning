@@ -10,7 +10,7 @@ export default function App() {
       <HelloWorld color="green-300" />
       <HelloWorld color="green-400" />
       <HelloWorld color="green-500" />
-      <HelloWorld  color="green-600" />
+      <HelloWorld color="green-600" />
       <HelloWorld color="green-700" />
       <HelloWorld color="green-800" />
 
