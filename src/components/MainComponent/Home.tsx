@@ -18,6 +18,7 @@ export default function Home() {
         type="button"
         styleType="add"
         className={"margin-around"}
+        tooleTip="Click to add"
       />
       <CustomButton
         label="Edit"
@@ -25,6 +26,7 @@ export default function Home() {
         type="button"
         styleType="other"
         className={"margin-around"}
+        tooleTip="Click to edit"
       />
       <CustomButton
         label="Delete"
@@ -32,6 +34,7 @@ export default function Home() {
         type="button"
         styleType="delete"
         className={"margin-around"}
+        tooleTip="Click to delete"
       />
     </>
   );

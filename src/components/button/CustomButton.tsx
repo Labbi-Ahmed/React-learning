@@ -1,5 +1,6 @@
 import React from "react";
 import "./CustomButton.css";
+import { Tooltip } from "antd";
 
 interface CustomButtonProps {
   label: string;
@@ -7,6 +8,7 @@ interface CustomButtonProps {
   type?: "button" | "submit" | "reset";
   styleType?: "default" | "add" | "delete" | "other";
   className?: string | string[];
+  tooleTip?: string;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
@@ -15,6 +17,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   type = "button",
   styleType = "default",
   className = "",
+  tooleTip = "Click!",
 }) => {
   const styleTypeClass = styleType ? `button-${styleType}` : "";
 
@@ -24,9 +27,13 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     .trim();
 
   return (
-    <button type={type} onClick={onClick} className={combinedClassNames}>
-      {label}
-    </button>
+    <>
+      <Tooltip title={tooleTip}>
+        <button type={type} onClick={onClick} className={combinedClassNames}>
+          {label}
+        </button>
+      </Tooltip>
+    </>
   );
 };
 
